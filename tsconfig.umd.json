@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "umd",
+    "rootDir": "src",
+    "outDir": "dist/umd_ts",
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "alwaysStrict": true,
+    // "strictNullChecks": true,
+    // "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    // "strictPropertyInitialization": true,
+    // "noImplicitAny": true,
+    // "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "stripInternal": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

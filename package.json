@@ -57,6 +57,7 @@
     "build:code": "tsx ./scripts/bundle.ts",
     "build:types": "tsc --emitDeclarationOnly --outDir dist/types",
     "build": "run-s build:clean build:code build:types",
+    "build:umd": "tsc -p tsconfig.umd.json --outDir dist/umd",
     "generate:api-docs": "tsx ./scripts/apidoc.ts",
     "generate:locales": "tsx ./scripts/generateLocales.ts",
     "copy:mime-types": "tsx ./scripts/copyMimeTypes.ts",
@@ -126,6 +127,7 @@
     "sanitize-html": "~2.7.1",
     "simple-git-hooks": "~2.8.0",
     "standard-version": "~9.5.0",
+    "ts-loader": "^9.3.1",
     "tsx": "~3.8.1",
     "typedoc": "~0.23.10",
     "typedoc-plugin-missing-exports": "~0.23.0",
@@ -139,5 +141,12 @@
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "swc": "^1.0.11",
+    "terser-webpack-plugin": "^5.3.3",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }

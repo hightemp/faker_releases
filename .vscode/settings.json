@@ -11,5 +11,6 @@
 
   "yaml.schemas": {
     "https://json.schemastore.org/codecov.json": ".github/.codecov.yml"
-  }
+  },
+  "window.title": "${dirty}${rootName} ${separator} [Branch: v7.4.0]"
 }

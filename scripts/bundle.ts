@@ -53,3 +53,18 @@ buildSync({
   target,
   outExtension: { '.js': '.mjs' },
 });
+
+console.log('Building dist for node type=module (iife)...');
+buildSync({
+  entryPoints: [
+    './src/index.ts',
+    ...Object.keys(locales).map((locale) => `./src/locale/${locale}.ts`),
+  ],
+  outdir: './dist/iife',
+  bundle: true,
+  sourcemap: false,
+  minify: true,
+  format: 'iife',
+  target,
+  outExtension: { '.js': '.js' },
+});
